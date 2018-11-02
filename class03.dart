@@ -1,4 +1,3 @@
-
 class Animal {
   Animal.origin() {
     print('Animal Class');
