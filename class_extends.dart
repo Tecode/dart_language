@@ -9,6 +9,7 @@ class Animal {
 class Cat extends Animal {
   Cat.fromJson(Map data) : super.fromJson({}) {
     print("继承");
+    // this
     this?.catName = data['name'];
     print(this.catName);
   }
