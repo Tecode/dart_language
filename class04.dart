@@ -1,21 +1,31 @@
-void main() {
- Animal objects =  Animal('doge', 10);
- num distance = objects.distanceTo(Animal('cat', 12));
- objects?.piker = null;
- print(objects.piker);
-
- Animal.fromJson({'x': 1, 'y': 2});
-}
-
-class Animal{
+class Person {
   String name;
   num age;
-  String piker;
-  Animal(this.name, this.age);
-  distanceTo(Animal option){
-    print(option.name+'--');
+  Person.origin(this.name, this.age);
+  Person(this.name, this.age);
+}
+
+class Student extends Person {
+  num idCard;
+  Student.origin(this.idCard, String name, num age) : super.origin(name, age) {}
+ 
+  String toString() {
+    return "string";
   }
-  static fromJson(opt){
-    print("Static Methead ${opt['x']} ${opt['y']}");
-  }
+}
+
+
+
+main() {
+  Person person = new Person.origin("Am", 52);
+  print(person.name);
+
+  Student student = new Student.origin(510214, "Bob", 12);
+  print(student.idCard);
+  a(person);
+  a(student);
+}
+
+void a(Object obj){
+  print(obj);
 }
