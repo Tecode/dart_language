@@ -7,9 +7,8 @@ class Human {
 
 // 继承超集的方法以及属性
 class Student extends Human {
-  // 重写
-  @override
   void say() {
+    super.say();
     print("子集${super.name}");
   }
 }
