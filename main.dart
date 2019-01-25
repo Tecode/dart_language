@@ -1,9 +1,20 @@
-// 枚举是一种特殊类
-enum Color { red, green, blue }
+class Animal {
+  String name;
+  String sayHello() {
+    return '我是$name';
+  }
+  Animal.initState(String name):
+  name = name;
+}
+
+class Cat extends Animal {
+  final int age;
+  Cat(this.age, String name):super.initState(name){
+    print("cat${this.age}个月");
+  }
+}
 
 void main() {
-  print(Color.red.index);
-
-  List<Color> list = Color.values;
-  list.forEach((value) => print(value));
+  Cat cat = new Cat(12, '小猫');
+  print(cat.sayHello());
 }
