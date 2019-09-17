@@ -1,6 +1,8 @@
 void main() {
-  var emp = Person('Bob', 20);
-  (emp as Person).name = 'Aming';
+  Person emp = Person('Bob', 20);
+  if (emp is Person) {
+    emp.name = 'Aming';
+  }
   print(emp.name);
 }
 
