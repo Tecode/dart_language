@@ -24,7 +24,9 @@ void main() {
   print(DateTime.now().millisecond - startTime);
   localFile.then((File file) {
     file.readAsString().then((value) {
-      print('${jsonDecode(value)['100']}----------------data');
+     Map<String, String> map_json = jsonDecode(value);
+     map_json.remove('100');
+      print('${map_json}----------------data');
     });
   });
 }
