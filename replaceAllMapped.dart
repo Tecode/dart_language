@@ -5,4 +5,5 @@ void main() {
   final newString = '$dateStr日'
       .replaceAllMapped(r'-', (match) => match.start == 4 ? '年' : '月');
   print(newString);
+  print(DateTime.now().year);
 }
