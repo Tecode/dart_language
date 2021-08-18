@@ -1,9 +1,23 @@
-void main() {
-  print('h e l l ow or ld'.toSortable());
+import 'dart:async';
+
+void main() async{
+var stream = countStream(101);
+  var sum = await sumStream(stream);
+  print(sum); //
 }
 
-extension StringExtensions on String {
-  String toSortable() {
-    return this.toLowerCase().replaceAll(' ', '');
+Future<int> generateData(int data) async => data;
+
+Stream<int> countStream(int to) async* {
+  for (int i = 1; i <= to; i++) {
+    yield await generateData(i);
   }
+}
+
+Future<int> sumStream(Stream<int> stream) async {
+  var sum = 0;
+  await for (var value in stream) {
+    sum += value;
+  }
+  return sum;
 }
