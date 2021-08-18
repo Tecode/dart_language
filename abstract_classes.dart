@@ -1,6 +1,6 @@
 class Person {
-  String name;
-  String idCard;
+  late String name;
+  late String idCard;
   void sleep() {
     print("睡觉");
   }

@@ -11,10 +11,10 @@ void main() {
     return _result;
   }
 
-  String _matchUrl(url) {
+  String? _matchUrl(url) {
     RegExp _regExp = RegExp(r"/(.*?)\?");
     if (_regExp.firstMatch(url) != null) {
-      return _regExp.firstMatch(url).group(0).replaceFirst('?', '');
+      return _regExp.firstMatch(url)!.group(0)!.replaceFirst('?', '');
     }
     return null;
   }
