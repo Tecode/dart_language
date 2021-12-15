@@ -1,5 +1,5 @@
 class Point {
-  num x, y;
+  late num x, y;
   static fromJson(Map data) {
     print(data);
   }

@@ -6,7 +6,7 @@ class Logger {
   // 工厂构造函数，如果Logger存在name值相同的记录，则在new 一个Logger时候返回原对象 （原理: 工厂构造函数可以缓存实例）
   factory Logger(String name) {
     if (_cache.containsKey(name)) {
-      return _cache[name];
+      return _cache[name] as Logger;
     } else {
       final logger = new Logger._internal(name);
       _cache[name] = logger;

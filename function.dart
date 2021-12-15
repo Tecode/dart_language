@@ -6,15 +6,13 @@ int max(int a, int b, [int sum = 20]) {
   return a > b ? a : b;
 }
 
-String say(String from, String msg, [String device]) {
+String say(String from, String msg, [String? device]) {
   var result = '$from says $msg';
-  if (device != null) {
-    result = '$result with a $device';
-  }
+  result = '$result with a $device';
   return result;
 }
 
-int sum({int number1, int number2 = 56}) {
+int sum({int number1 = 0, int number2 = 56}) {
   return number1 + number2;
 }
 
