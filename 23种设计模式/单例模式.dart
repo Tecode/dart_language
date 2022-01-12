@@ -1,8 +1,10 @@
 void main(List<String> args) {
   print(Manerger.instance == Manerger.instance);
+  print(Manerger002._instance == Manerger002._instance);
   Manerger.instance.sayHellow();
 }
 
+// getter方式实现
 class Manerger {
   Manerger._private();
   static final Manerger _instance = Manerger._private();
@@ -15,5 +17,15 @@ class Manerger {
 
   void sayHellow() {
     print("hellow $_name");
+  }
+}
+
+
+// factory方式实现
+class Manerger002 {
+  Manerger002._privateConstructor();
+  static final Manerger002 _instance = Manerger002._privateConstructor();
+  factory Manerger002() {
+    return _instance;
   }
 }
