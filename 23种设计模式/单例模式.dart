@@ -1,4 +1,5 @@
 // 单例模式 Singleton
+// 初始化一个实例提供给多方调用
 void main(List<String> args) {
   print(Manerger.instance == Manerger.instance);
   print(Manerger002._instance == Manerger002._instance);
