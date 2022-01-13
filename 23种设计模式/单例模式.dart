@@ -1,3 +1,4 @@
+// 单例模式 Singleton
 void main(List<String> args) {
   print(Manerger.instance == Manerger.instance);
   print(Manerger002._instance == Manerger002._instance);
