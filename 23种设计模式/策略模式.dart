@@ -1,4 +1,4 @@
-// Strategy
+// Strategy 策略模式
 
 // 策略模式应用到Tank Fire
 // 策略1:默认一颗子弹
