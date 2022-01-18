@@ -8,6 +8,7 @@ abstract class Observer {
 class Event {
   late String status;
   Event(this.status);
+  String get name  => "F1赛车🏎️";
 }
 
 class TirePersonnel implements Observer {
@@ -31,6 +32,7 @@ class OilPersonnel implements Observer {
 class Assistant implements Observer {
   void water(Event event) {
     print("${event.status}->送给驾驶员水");
+    print(event.name);
   }
 
   @override
